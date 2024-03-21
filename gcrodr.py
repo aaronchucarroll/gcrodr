@@ -13,4 +13,10 @@ def gcrodr(A, b, m, k, x0):
     x = np.zeros(len(x0))  #initialize solution vector
     count = 1
 
-    r = b - A * x0
+    r = b - A.dot(x0)  #calculate initial preconditioned residual
+
+    resvec = np.zeros(2) # calculate initial preconditioned residual norm
+    resvec[0] = np.linalg.norm(r)
+    print(f'||r|| = {resvec[0]}\t\tnmv = 0')
+
+
