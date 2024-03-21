@@ -19,4 +19,7 @@ def gcrodr(A, b, m, k, x0):
     resvec[0] = np.linalg.norm(r)
     print(f'||r|| = {resvec[0]}\t\tnmv = 0')
 
+    bnorm = np.linalg.norm(b)
+    U_persist = {}
+
 
